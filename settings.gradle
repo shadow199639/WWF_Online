@@ -1,0 +1,2 @@
+rootProject.name='WWF Online'
+include ':app'

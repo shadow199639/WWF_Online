@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.review.AnimalListActivity"></activity>
+        <activity android:name=".ui.review.AnimalDetailsActivity"></activity>
+        <activity android:name=".ui.review.AnimalListActivity" />
         <activity android:name=".ui.news.NewsDetailsActivity" />
         <activity
             android:name=".MainActivity"

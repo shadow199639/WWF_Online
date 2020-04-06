@@ -12,13 +12,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!--
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_margin="15dp"
             android:minHeight="200dp"
             app:cardBackgroundColor="#f5f5f5"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="15dp">-->
 
             <TextView
                 android:id="@+id/txtName"
@@ -26,8 +27,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="SAMPLE"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-        </com.google.android.material.card.MaterialCardView>
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <!--</com.google.android.material.card.MaterialCardView>-->
 
     </LinearLayout>
 

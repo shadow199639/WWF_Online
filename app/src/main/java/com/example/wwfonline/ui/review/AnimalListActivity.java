@@ -2,6 +2,7 @@ package com.example.wwfonline.ui.review;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -44,21 +45,13 @@ public class AnimalListActivity extends AppCompatActivity {
                             if (response.isSuccessful()) {
                                 Toast.makeText(getApplicationContext(), "Load Successful", Toast.LENGTH_SHORT).show();
                                 animalDetailsModels = (List<AnimalDetailsModel>) response.body();
-                                listViewAnimalDetails.setAdapter(new AnimalDetailsAdapter(getApplicationContext(), animalDetailsModels));
+                                listViewAnimalDetails.setAdapter(new AnimalDetailsAdapter(AnimalListActivity.this, animalDetailsModels));
                                 listViewAnimalDetails.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                     @Override
                                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                         AnimalDetailsModel animalDetailsModel = animalDetailsModels.get(position);
                                         Intent intent = new Intent(AnimalListActivity.this, AnimalDetailsActivity.class);
                                         intent.putExtra("id", animalDetailsModel.getAnimalId());
-                                        intent.putExtra("animal_name", animalDetailsModel.getAnimalName());
-                                        intent.putExtra("desp", animalDetailsModel.getDescription());
-                                        intent.putExtra("habitat", animalDetailsModel.getHabitat());
-                                        intent.putExtra("population", animalDetailsModel.getPopulation());
-                                        intent.putExtra("place", animalDetailsModel.getPlace());
-                                        intent.putExtra("img", animalDetailsModel.getImg());
-                                        intent.putExtra("status", animalDetailsModel.getStatusName());
-                                        intent.putExtra("category", animalDetailsModel.getCatName());
                                         startActivity(intent);
                                     }
                                 });

@@ -10,12 +10,16 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface WWF_Service {
-    @GET("/api/AnimalDetails")
-    Call<List<AnimalDetailsModel>> findAllAnimals();
-
     @GET("/api/News")
     Call<List<NewsModel>> findAll();
 
     @GET("/api/NewsDetails/{id}")
     Call<NewsDetailsModel> getNewsById(@Path("id")int id);
+
+    @GET("/api/AnimalDetails")
+    Call<List<AnimalDetailsModel>> findAllAnimals();
+
+    @GET("/api/AnimalDetails/{id}")
+    Call<AnimalDetailsModel> getAnimalById(@Path("id")int id);
+
 }

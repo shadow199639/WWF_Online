@@ -53,6 +53,7 @@ public class AnimalListActivity extends AppCompatActivity {
                                         Intent intent = new Intent(AnimalListActivity.this, AnimalDetailsActivity.class);
                                         intent.putExtra("id", animalDetailsModel.getAnimalId());
                                         startActivity(intent);
+
                                     }
                                 });
                             } else {

@@ -1,4 +1,4 @@
-package com.example.wwfonline.Models;
+package com.example.wwfonline.Models.Animal;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

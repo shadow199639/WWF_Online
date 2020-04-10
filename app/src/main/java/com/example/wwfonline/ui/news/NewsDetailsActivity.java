@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.wwfonline.Models.NewsDetailsModel;
+import com.example.wwfonline.Models.News.NewsDetailsModel;
 import com.example.wwfonline.R;
 import com.example.wwfonline.Service.APIClient;
 import com.squareup.picasso.Picasso;

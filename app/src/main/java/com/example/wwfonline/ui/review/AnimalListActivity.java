@@ -2,7 +2,6 @@ package com.example.wwfonline.ui.review;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.wwfonline.Adapters.AnimalDetailsAdapter;
-import com.example.wwfonline.Models.AnimalDetailsModel;
+import com.example.wwfonline.Models.Animal.AnimalDetailsModel;
 import com.example.wwfonline.R;
 import com.example.wwfonline.Service.APIClient;
 

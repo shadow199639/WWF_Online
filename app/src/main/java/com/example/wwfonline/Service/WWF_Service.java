@@ -1,8 +1,8 @@
 package com.example.wwfonline.Service;
 
-import com.example.wwfonline.Models.AnimalDetailsModel;
-import com.example.wwfonline.Models.NewsModel;
-import com.example.wwfonline.Models.NewsDetailsModel;
+import com.example.wwfonline.Models.Animal.AnimalDetailsModel;
+import com.example.wwfonline.Models.News.NewsModel;
+import com.example.wwfonline.Models.News.NewsDetailsModel;
 
 import java.util.List;
 import retrofit2.Call;

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.example.wwfonline.Models.NewsModel;
+import com.example.wwfonline.Models.News.NewsModel;
 import com.example.wwfonline.R;
 import com.squareup.picasso.Picasso;
 import java.util.List;

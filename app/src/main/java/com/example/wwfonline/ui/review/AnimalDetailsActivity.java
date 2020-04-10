@@ -8,22 +8,18 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
-import com.example.wwfonline.Models.AnimalDetailsModel;
-import com.example.wwfonline.Models.NewsDetailsModel;
+import com.example.wwfonline.Models.Animal.AnimalDetailsModel;
 import com.example.wwfonline.R;
 import com.example.wwfonline.Service.APIClient;
 import com.squareup.picasso.Picasso;
 
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
 
 public class AnimalDetailsActivity extends AppCompatActivity {
 
@@ -77,7 +73,7 @@ public class AnimalDetailsActivity extends AppCompatActivity {
                         txtStatus.setText(post.getStatusName());
                         txtHab.setText(post.getHabitat());
 
-                        if(post.getPopulation() == 0)
+                        if(post.getPopulation() == null)
                             txtPop.setText("No information");
                         else txtPop.setText(post.getPopulation().toString());
 

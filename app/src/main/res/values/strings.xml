@@ -3,4 +3,13 @@
     <string name="title_review">Review</string>
     <string name="title_news">News</string>
     <string name="title_statistics">Statistics</string>
+
+    <string name="animal_details">Details</string>
+    <string name="news_details">More details</string>
+    <string name="animal_list">Animals list</string>
+    <string name="animal_type">Types</string>
+    <string name="animal_stat">More info</string>
+
+
+
 </resources>

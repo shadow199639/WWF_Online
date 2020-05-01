@@ -12,14 +12,23 @@ import com.example.wwfonline.Models.Animal.AnimalDetailsModel;
 import com.example.wwfonline.Models.Animal.AnimalDetailsModelViewHolder;
 import com.example.wwfonline.Models.News.NewsModel;
 import com.example.wwfonline.Models.News.NewsModelViewHolder;
+import com.example.wwfonline.OnNewsListener;
 import com.example.wwfonline.R;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+
+
+
 
 public class MyAdapter extends RecyclerView.Adapter<BaseViewHolder> {
-    private List<Object> items = new ArrayList();
+    private final OnNewsListener listener;
+    private List items = new ArrayList();
+
+
+    public MyAdapter(OnNewsListener listener) {
+        this.listener = listener;
+    }
 
     @NonNull
     @Override
@@ -38,15 +47,14 @@ public class MyAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     @Override
     public final void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
-        holder.updateContent(items.get(position));
-    }
+        holder.updateContent(items.get(position)); }
 
     @Override
     public int getItemCount() {
         return items.size();
     }
 
-    public void updateItems(List<Object> newItems) {
+    public void updateItems(List newItems) {
         this.items = newItems;
         notifyDataSetChanged();
     }

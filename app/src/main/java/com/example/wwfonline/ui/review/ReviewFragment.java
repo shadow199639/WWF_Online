@@ -27,6 +27,9 @@ public class ReviewFragment extends Fragment implements View.OnClickListener{
 
         Button btnContinent = (Button) view.findViewById(R.id.btnContinent);
         btnContinent.setOnClickListener(this);
+
+        Button btnCat = (Button) view.findViewById(R.id.btnCat);
+        btnCat.setOnClickListener(this);
         return view;
     }
 
@@ -35,9 +38,30 @@ public class ReviewFragment extends Fragment implements View.OnClickListener{
         switch (v.getId()){
             case R.id.btnAll:
                 Intent intent1 = new Intent(getActivity(), AnimalListActivity.class);
-                String type1 = "allAnimals";
-                intent1.putExtra("type", type1);
+                String animalList = "allAnimals";
+                intent1.putExtra("animalList", animalList);
                 startActivity(intent1);
+                break;
+
+            case R.id.btnCat:
+                Intent intent2 = new Intent(getActivity(), AnimalTypeActivity.class);
+                String type1 = "byCat";
+                intent2.putExtra("type", type1);
+                startActivity(intent2);
+                break;
+
+            case R.id.btnContinent:
+                Intent intent3 = new Intent(getActivity(), AnimalTypeActivity.class);
+                String type2 = "byCon";
+                intent3.putExtra("type", type2);
+                startActivity(intent3);
+                break;
+
+            case R.id.btnStatus:
+                Intent intent4 = new Intent(getActivity(), AnimalTypeActivity.class);
+                String type3 = "byStat";
+                intent4.putExtra("type", type3);
+                startActivity(intent4);
                 break;
         }
     }

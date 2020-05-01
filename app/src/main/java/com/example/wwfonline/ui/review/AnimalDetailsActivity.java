@@ -7,9 +7,11 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.wwfonline.Models.Animal.AnimalDetailsModel;
 import com.example.wwfonline.R;
@@ -23,7 +25,6 @@ import retrofit2.Response;
 
 public class AnimalDetailsActivity extends AppCompatActivity {
 
-    SwipeRefreshLayout swipeRefreshLayout;
     TextView txtName;
     TextView txtDesc;
     TextView txtHab;
@@ -39,10 +40,18 @@ public class AnimalDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal_details);
 
-        swipeRefreshLayout = findViewById(R.id.swipeId);
 
         Bundle arguments = getIntent().getExtras();
         int id = arguments.getInt("id");
+
+        final Toolbar toolbar = findViewById(R.id.toolbar);
+        setActionBar(toolbar);
+
+        // add back arrow to toolbar
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
 
         txtName = (TextView) findViewById(R.id.txtName);
         txtDesc = (TextView) findViewById(R.id.txtDesp);
@@ -99,5 +108,15 @@ public class AnimalDetailsActivity extends AppCompatActivity {
                         Toast.makeText(AnimalDetailsActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // close this activity and return to preview activity (if there is any)
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

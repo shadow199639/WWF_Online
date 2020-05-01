@@ -5,7 +5,10 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder {
+import com.example.wwfonline.Models.News.NewsModel;
+
+public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder{
+
     public BaseViewHolder(@NonNull View itemView) {
         super(itemView);
     }
@@ -14,4 +17,5 @@ public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder {
         updateContentImp((T)item);
     }
     protected abstract void updateContentImp(T item);
+
 }

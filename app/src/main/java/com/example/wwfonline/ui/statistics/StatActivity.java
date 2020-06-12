@@ -63,7 +63,6 @@ public class StatActivity extends AppCompatActivity {
         else if(name.compareTo("byStat") == 0) {
             description.setText("All animals by status");
             description.setPosition(800, 1300);
-
         }
 
         description.setTextSize(25);

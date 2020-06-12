@@ -13,8 +13,6 @@ import com.example.wwfonline.R;
 import com.example.wwfonline.ui.statistics.StatisticsFragment;
 
 public class ReviewFragment extends Fragment implements View.OnClickListener{
-
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
